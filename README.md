@@ -18,3 +18,5 @@ test_exit_code=$?
     
   fi
 ```
+
+Change email@yourdomain.com with your actual email address
