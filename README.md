@@ -9,7 +9,11 @@ Add this script to the .bashrc file in the root directory.
 
 
 output=$(last|grep root)
+
 test_exit_code=$?
+
   if [ "$test_exit_code" == 0  ]; then
+  
     echo "ALERT - Root Shell Access on $(hostname | awk '{print toupper($0)}'):' `date` `who|grep -m1  root`" | mail -s "Alert:     Root Access from  $(last |grep niko | awk '{print $3;exit}')"  email@yourdomain.com
+    
   fi
